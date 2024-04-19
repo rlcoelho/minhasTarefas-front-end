@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minhas Tarefas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+  </head>
+  <body class="w3-black w3-content" style="max-width:1600px;">  
+      <header class="w3-top w3-black w3-padding-16">
+          <br>
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <br><h4 style="float: left"><b>Minhas Tarefas</b></h4>
+          <nav class="nav-menu">
+            <ul class="ul-menu">            
+              <li class="li-menu">
+                <a class="a-menu" href="#pagina1" onclick="scrollToSection('pagina1')">todas as tarefas</a>
+              </li>              
+              <li class="li-menu">
+                <a class="a-menu" href="#pagina2" onclick="scrollToSection('pagina2');getListaCategorias()">incluir nova tarefa</a>
+              </li>
+              <li class="li-menu">
+                <a class="a-menu" href="#pagina3" onclick="scrollToSection('pagina3')">categorias</a>
+              </li>
+            </ul>
+          </nav>
+      </header>
+  
+      <!-- Área de conteúdo -->
+      <div class="w3-container w3-padding-16 w3-round">
+
+          <!-- Página 1 - todas as tarefas -->
+
+          <section id="pagina1" class="rc-section w3-container w3-round w3-padding-24" style="margin-top: 100px;">
+            <br><h4 style="text-align:center">Todas as tarefas</h4><br>
+              <section class="items four-columns">
+                  <table id="myTable">
+                    <tr>
+                      <th class="w3-text-black">Categoria</th>
+                      <th class="w3-text-black">Tarefa</th>
+                      <th class="w3-text-black">Data prevista</th>
+                      <th class="w3-text-black">Ações</th>
+                    </tr>
+                  </table>
+              </section>
+         </section>
+
+        <!-- Página 2 - nova tarefa --> 
+
+        <section id="pagina2" class="rc-section w3-container w3-round w3-padding-24" style="margin-top: 100px;">
+        <br><h4 style="text-align:center">Nova Tarefa</h4>
+        <div class="form-container w3-row-padding">
+           <form id="formTarefa"> 
+                <div class="w3-row-padding">
+                    <label>Categoria</label>
+                    <select id="fk_categoria" class="w3-select w3-border" name="Categoria" required>
+                        <!-- options buscados pela funcao getSelectCategorias() -->
+                    </select>
+                </div><br>
+                <div class="w3-row-padding">
+                    <label>Tarefa</label>
+                    <textarea id="descricao" class="w3-input w3-border" name="DescricaoTarefa" required></textarea>
+                </div><br>
+                <div class="w3-row-padding">
+                    <label>Data prevista</label>
+                    <input id="data_prevista" class="w3-input w3-border" type="datetime-local" name="DataPrevista" required>
+                </div><br>
+                <div class="w3-row-padding w3-center">
+                    <button onclick="novaTarefa()" class="w3-button w3-black w3-margin-bottom">
+                        <i class="fa fa-paper-plane w3-margin-right"></i>Inserir
+                    </button>
+                </div>
+            </form>    
+        </div>
+      </section>
+
+      <!-- Página 3 - cadastro de categorias -->
+      
+      <section id="pagina3" class="rc-section w3-container w3-round w3-padding-24" style="margin-top: 100px;">
+        <br><h4 style="text-align:center">Nova Categoria</h4>
+        <div class="form-container w3-row-padding">
+           <form id="formCategoria"> 
+              <div class="w3-row-padding">
+                <label>Categoria</label>
+                <textarea id="descricao_categoria" class="w3-input w3-border" name="descricao_categoria" required></textarea>
+              </div><br><br>
+              <div class="w3-row-padding w3-center">
+                <button onclick="novaCategoria()" class="w3-button w3-black w3-margin-bottom">
+                 <i class="fa fa-paper-plane w3-margin-right"></i>Inserir
+                </button>
+              </div>
+           </form>    
+        </div>          
+        <br><br><h4 style="text-align:center">Todas as categorias</h4><br>
+        <section class="items two-columns">
+          <table id="myTable2">
+            <tr>
+              <th class="w3-text-black">Categoria</th>
+              <th class="w3-text-black">Ações</th>
+            </tr>
+          </table>
+        </section>
+    </section>
+        
+  </div>
+  <!-- fim da área de conteúdo -->  
+      
+  <!-- Footer -->
+  <footer class="w3-black w3-padding-24 w3-center"><i>"Now is better than never!"</i></footer>
+      
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+  <script src="https://kit.fontawesome.com/01ce9883e9.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>
