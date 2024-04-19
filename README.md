@@ -8,12 +8,17 @@ Front-end desenvolvido no formato de Single Page Application (SPA) utilizando HT
 
 O back-end que integra o sistema **Minhas Tarefas** utiliza a linguagem Python com o microframework web Flask, framework ORM SQLAlchemy e banco de dados embutido SQLite3, além de outras bibliotecas do Python.
 
+---
+## Repositório do back-end
+
+Este front-end necessita do back-end que está disponível no repositório: https://github.com/rlcoelho/minhasTarefas-back-end
 
 ---
 ## Como executar
 
 Basta fazer o download do projeto e abrir o arquivo index.html no seu browser. Devem estar na mesma pasta os arquivos index.html, w3.css e scripts.js.
 
+Na primeira utilização, antes de tentar incluir uma nova tarefa, como não haverá registros no banco de dados, a primeira ação deverá ser a criação de uma categoria.
 
 ---
 ## Melhorias previstas
